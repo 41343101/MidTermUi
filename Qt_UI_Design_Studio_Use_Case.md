@@ -1,59 +1,59 @@
-# Qt UI Design Studio Use Case: Smart Home Control Dashboard
+# Qt UI Design Studio 使用案例：智慧家居控制儀表板
 
-## Overview
-This use case demonstrates Qt Design Studio's application in developing a modern Smart Home Control Dashboard for an IoT platform, showcasing designer-developer collaboration to create an intuitive home automation interface.
+## 概述
+此使用案例展示 Qt Design Studio 在開發現代化物聯網平台智慧家居控制儀表板的應用，呈現設計師與開發人員協作創建直觀家庭自動化介面的過程。
 
-## Project Background
-**Company:** SmartLiving Technologies  
-**Product:** HomeHub Central Controller  
-**Target Platform:** Android tablets and embedded Linux devices  
-**Timeline:** 4-week design and development cycle  
-**Team:** 2 UI/UX designers, 3 Qt developers
+## 專案背景
+**公司：** SmartLiving Technologies  
+**產品：** HomeHub 中央控制器  
+**目標平台：** Android 平板電腦和嵌入式 Linux 設備  
+**時程：** 4 週設計與開發週期  
+**團隊：** 2 名 UI/UX 設計師、3 名 Qt 開發人員
 
-## Business Requirements
-SmartLiving Technologies needs a visually appealing dashboard enabling homeowners to monitor and control lighting, HVAC, security cameras, and door locks; view energy consumption; create automation routines; receive security notifications; and support light/dark themes with smooth animations and responsive touch interactions.
+## 業務需求
+SmartLiving Technologies 需要一個視覺上吸引人的儀表板，使房主能夠監控和控制照明、空調、監視器和門鎖；查看能源消耗；創建自動化程序；接收安全通知；並支援淺色/深色主題，具備流暢的動畫和靈敏的觸控互動。
 
-## Why Qt Design Studio?
-Qt Design Studio was selected for its designer-developer workflow separation, cross-platform support, QML integration with hardware acceleration, Photoshop asset import capabilities, and live device preview during development.
+## 為何選擇 Qt Design Studio？
+選擇 Qt Design Studio 是因為它能分離設計師與開發人員的工作流程、支援跨平台、QML 整合硬體加速、Photoshop 資源匯入功能，以及開發期間的即時設備預覽。
 
-## Use Case Scenario
+## 使用案例情境
 
-### Phase 1: Design Mockup Creation (Week 1)
-UI/UX designers created the dashboard mockup using Qt Design Studio's Form Editor for drag-and-drop layout, designed custom components (temperature control with circular slider, light dimmer, room cards, energy graphs), defined component states for device statuses, and created screen transitions using the Timeline view. Key features utilized included the States Editor for UI variations, Timeline for animations, and Asset Library for resource management.
+### 階段 1：設計原型創建（第 1 週）
+UI/UX 設計師使用 Qt Design Studio 的表單編輯器進行拖放式佈局創建儀表板原型，設計自訂元件（帶圓形滑桿的溫度控制、燈光調光器、房間卡片、能源圖表），定義設備狀態的元件狀態，並使用時間軸視圖創建畫面轉場。主要使用的功能包括狀態編輯器用於 UI 變化、時間軸用於動畫，以及資源庫用於資源管理。
 
-### Phase 2: Interactive Prototyping (Week 2)
-Designers added touch interactions using Connections, implemented multi-screen navigation (Dashboard → Room Details → Device Settings), created responsive layouts for different orientations, designed loading and empty states, and simulated device changes with mock data. Interactive elements included swipe navigation, tap toggles, drag adjustments for temperature/brightness, and pull-to-refresh functionality.
+### 階段 2：互動原型製作（第 2 週）
+設計師使用連接器添加觸控互動，實作多畫面導航（儀表板 → 房間詳情 → 設備設定），創建不同方向的響應式佈局，設計載入和空狀態，並使用模擬資料模擬設備變化。互動元素包括滑動導航、點擊切換、拖曳調整溫度/亮度，以及下拉重新整理功能。
 
-### Phase 3: Developer Integration (Week 3)
-Qt developers imported QML files into Qt Creator and integrated C++ backend classes for device communication, created data models (QAbstractListModel) for devices and rooms, connected QML properties to backend data, implemented MQTT for real-time updates, and added local database storage. The workflow involved designers exporting QML, developers adding business logic without modifying visuals, parallel iteration, and Git-based synchronization.
+### 階段 3：開發人員整合（第 3 週）
+Qt 開發人員將 QML 檔案匯入 Qt Creator 並整合用於設備通訊的 C++ 後端類別，創建設備和房間的資料模型（QAbstractListModel），將 QML 屬性連接到後端資料，實作 MQTT 用於即時更新，並添加本地資料庫儲存。工作流程包括設計師匯出 QML、開發人員在不修改視覺效果的情況下添加業務邏輯、平行迭代，以及基於 Git 的同步。
 
-### Phase 4: Refinement and Testing (Week 4)
-The team refined animations based on device performance, optimized resources, implemented theme switching using States, tested on Samsung Galaxy Tab and custom Linux panels, adjusted touch targets for accessibility, and improved color contrast. Testing covered rapid device status changes, network disconnection handling, multi-touch gestures, screen rotation, and low-light usability.
+### 階段 4：優化與測試（第 4 週）
+團隊根據設備效能優化動畫，優化資源，使用狀態實作主題切換，在三星 Galaxy Tab 和自訂 Linux 面板上測試，調整觸控目標以提升無障礙性，並改善色彩對比。測試涵蓋快速設備狀態變化、網路斷線處理、多點觸控手勢、螢幕旋轉和低光照可用性。
 
-## Key Features Implemented
+## 實作的主要功能
 
-**Dashboard Home:** Grid layout with room cards, device status, quick controls, weather widget, and energy consumption summary with daily/weekly/monthly views.
+**儀表板首頁：** 帶有房間卡片的網格佈局、設備狀態、快速控制、天氣小工具，以及具有每日/每週/每月視圖的能源消耗摘要。
 
-**Room Detail View:** Device list with controls, scene buttons (Movie Mode, Away Mode, Sleep Mode), automation rules, and historical graphs.
+**房間詳情視圖：** 帶有控制的設備列表、場景按鈕（電影模式、外出模式、睡眠模式）、自動化規則和歷史圖表。
 
-**Settings:** Drag-and-drop automation builder, calendar-based scheduling, device pairing wizard, and notification preferences.
+**設定：** 拖放式自動化建構器、基於日曆的排程、設備配對精靈和通知偏好設定。
 
-## Results and Benefits
+## 結果與效益
 
-**Design Efficiency:** 60% reduction in design-to-prototype time; designers work independently without developer dependencies; real-time preview reduces iteration cycles.
+**設計效率：** 設計到原型的時間減少 60%；設計師可獨立工作而不依賴開發人員；即時預覽減少迭代週期。
 
-**Code Quality:** Clean UI/business logic separation; reusable QML components reduce duplication; easier maintenance with declarative definitions.
+**程式碼品質：** 清晰的 UI/業務邏輯分離；可重複使用的 QML 元件減少重複；以宣告式定義使維護更容易。
 
-**Performance:** Smooth 60 FPS animations; reduced memory footprint; fast startup (under 2 seconds on embedded device).
+**效能：** 流暢的 60 FPS 動畫；減少記憶體佔用；快速啟動（嵌入式設備上不到 2 秒）。
 
-**Cross-Platform:** Single QML codebase for Android tablets and Linux panels; minor platform-specific adjustments; consistent user experience.
+**跨平台：** Android 平板電腦和 Linux 面板使用單一 QML 程式碼庫；僅需微調平台特定部分；一致的使用者體驗。
 
-## Lessons Learned
+## 經驗總結
 
-Early hardware testing reveals performance constraints; investing in reusable components ensures consistency; extensive use of States manages UI variations; regular designer-developer sync maintains alignment; profiling animations on low-end hardware guarantees smooth experience across all devices.
+早期硬體測試揭示效能限制；投資於可重複使用的元件確保一致性；廣泛使用狀態管理 UI 變化；定期設計師-開發人員同步維持一致性；在低階硬體上分析動畫確保所有設備上的流暢體驗。
 
-## Conclusion
+## 結論
 
-Qt Design Studio proved instrumental in delivering the SmartLiving HomeHub dashboard on schedule. The tool's visual design environment empowered designers to create sophisticated interfaces while maintaining technical feasibility. The seamless integration with Qt Creator allowed developers to focus on robust backend implementation without compromising the design vision. The resulting application achieved high user satisfaction scores and positioned SmartLiving Technologies competitively in the smart home market.
+Qt Design Studio 證明對於按時交付 SmartLiving HomeHub 儀表板至關重要。該工具的視覺化設計環境使設計師能夠創建精緻的介面，同時保持技術可行性。與 Qt Creator 的無縫整合使開發人員能夠專注於強健的後端實作，而不會損害設計願景。最終應用程式獲得了高使用者滿意度評分，並使 SmartLiving Technologies 在智慧家居市場中具有競爭力。
 
-The success of this project established Qt Design Studio as the standard tool for future UI development at SmartLiving Technologies, demonstrating its value in modern embedded and mobile application development.
+此專案的成功確立了 Qt Design Studio 作為 SmartLiving Technologies 未來 UI 開發的標準工具，展示了其在現代嵌入式和行動應用程式開發中的價值。
